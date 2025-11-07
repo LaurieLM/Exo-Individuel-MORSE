@@ -45,3 +45,18 @@ translateLatinCharacter = (characters) => {
 
 translateLatinCharacter(charactersTest);
 console.log(translateLatinCharacter(charactersTest));
+
+// Etape 3 : Correspondance Alphabet Latin -> Alphabet Morse pour une phrase entière
+encode = (text) => {
+  //Appeler le fonction getLatinCharacterList
+  getLatinCharacterList(text);
+  console.log(getLatinCharacterList(text));
+  //Boucler sur chaque caractère du tableau
+  for (let i = 0; i < getLatinCharacterList(text).length; i++) {
+    let char = getLatinCharacterList(text)[i];
+    translateLatinCharacter(char);
+    console.log(translateLatinCharacter(char));
+  }
+};
+
+encode(stringTest);
